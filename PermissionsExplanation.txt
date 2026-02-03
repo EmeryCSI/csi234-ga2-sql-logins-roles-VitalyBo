@@ -1,5 +1,4 @@
 
-
 1. Explain the different types of permissions you assigned (SELECT, INSERT, UPDATE, DELETE) and what each allows a user to do.
 SELECT - Allows a user to read data from a table or view. The user can query rows but cannot modify data.
 INSERT - Allows a user to add new rows to a table. Existing data cannot be changed or removed.
