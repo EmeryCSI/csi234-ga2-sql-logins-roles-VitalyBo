@@ -1,0 +1,26 @@
+
+
+1. Explain the different types of permissions you assigned (SELECT, INSERT, UPDATE, DELETE) and what each allows a user to do.
+SELECT - Allows a user to read data from a table or view. The user can query rows but cannot modify data.
+INSERT - Allows a user to add new rows to a table. Existing data cannot be changed or removed.
+UPDATE - Allows a user to modify existing rows in a table. This can be limited to specific columns.
+DELETE - Allows a user to remove rows from a table. It does not allow inserting or modifying data.
+
+2. Describe the concept of schema-level permissions vs. table-level permissions.
+Schema-level permissions - apply to all objects within a schema (tables, views, functions). They are used to control access broadly, such as allowing a role to read all tables in a schema.
+Table-level permissions - apply to a specific table only. They provide fine-grained control over who can read or modify data in that individual table.
+The main difference is that schema-level permissions are broader and easier to manage and the table-level permissions are more granular and restrictive.
+
+3. Explain how column-level permissions work and why they might be useful.
+Column-level permissions allow granting access to specific columns within a table, typically for SELECT or UPDATE. A user can be allowed to read or update certain columns while being denied access to others. The main features: it can protect sensitive data (e.g., SSN, salary, passwords)and allow users to work with required data only, without exposing confidential fields.
+
+4. Discuss the principle of least privilege and how it's applied in this RBAC setup.
+The principle of least privilege means granting users only the minimum permissions necessary to perform their job. This reduces the risk of accidental or malicious data modification
+
+5. Explain the potential security benefits of using roles instead of assigning permissions directly to users.
+Security benefits of using roles instead of direct user permissions are:
+   a. Centralized management: Permissions are defined once per role, not per user.
+   b. Reduced errors: Less risk of misconfiguring individual user permissions.
+   c. Consistency: Users with the same role always have identical access.
+   d. Scalability: Easier to add, remove, or modify access as users change roles.
+   e. Auditability: Roles make it easier to review and understand access control.
